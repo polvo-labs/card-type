@@ -3,6 +3,8 @@
 Another module for card detection, with special attention
 for brazilian cards like **Elo** and **Hipercard**.
 
+**[LIVE DEMO](https://polvo-labs.github.io/card-type/example/)**
+
 ## supported cards
 
 * Visa
