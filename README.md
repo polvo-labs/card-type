@@ -12,6 +12,7 @@ for brazilian cards like **Elo** and **Hipercard**.
 * American Express
 * Diners Club
 * Discover
+* JCB
 * Elo
 * Hipercard
 
