@@ -14,6 +14,7 @@ for brazilian cards like **Elo** and **Hipercard**.
 * Discover
 * JCB
 * Maestro
+* UnionPay
 * Elo
 * Hipercard
 

@@ -16,6 +16,9 @@ export default {
     [300, 305],
     [38, 39]
   ],
+  unionpay: [
+    62
+  ],
   discover: [
     6011,
     [622126, 622925],
