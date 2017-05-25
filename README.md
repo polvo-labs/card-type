@@ -13,6 +13,7 @@ for brazilian cards like **Elo** and **Hipercard**.
 * Diners Club
 * Discover
 * JCB
+* Maestro
 * Elo
 * Hipercard
 
