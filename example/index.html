@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <title>CardType Example</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h1 class="page-header">Card Type</h1>
+        <div class="form-group">
+          <input class="form-control input-lg" type="text" placeholder="Type your card number">
+        </div>
+        <div class="well">
+          Please, type some card number above.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../dist/card-type.js"></script>
+  <script>
+    var input = document.querySelector('input')
+    var result = document.querySelector('.well')
+
+    input.addEventListener('change', onInputChange)
+    input.addEventListener('input', onInputChange)
+
+    function onInputChange (e) {
+      var cards = CardType.cardType(e.target.value)
+      result.innerHTML = JSON.stringify(cards)
+    }
+  </script>
+</body>
+</html>

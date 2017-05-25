@@ -1,0 +1,39 @@
+{
+  "name": "cc-type",
+  "version": "0.0.0",
+  "main": "dist/card-type.js",
+  "scripts": {
+    "js": "simplifyify \"src/index.js\" -o \"dist/card-type.js\" -d -s CardType",
+    "standard": "standard *.js",
+    "pretest": "npm run build && npm run standard",
+    "test": "ava --verbose",
+    "build": "npm run js"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": {
+      "presets": ["es2015"]
+    }
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babelify": "^7.3.0",
+    "simplifyify": "^3.2.1",
+    "standard": "^10.0.2"
+  }
+}
