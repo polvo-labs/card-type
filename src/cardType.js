@@ -6,11 +6,10 @@ export default function cardType (card) {
   )
   const detectedTypes = []
 
-  Object.keys(cards).forEach(type => {
-    const patterns = cards[type]
-    patterns.forEach(pattern => {
+  cards.forEach(card => {
+    card.pattern.forEach(pattern => {
       if (checkCard(bin, pattern)) {
-        detectedTypes.unshift(type)
+        detectedTypes.unshift(card.name)
       }
     })
   })

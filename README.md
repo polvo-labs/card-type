@@ -56,21 +56,24 @@ cardType(384140) // 'hipercard'
 cardType('00000') // ''
 ```
 
-#### `cards : Object`
+#### `cards : Array`
 
-An object with cards patterns and ranges. You can extend it and include your
+An array with card patterns and ranges. You can extend it and include your
 own cards.
 
 ```js
-cards.someNewCard = [
-  777,
-  [8900, 8950]
-]
+cards.push({
+  name: 'my-card',
+  pattern: [
+    777, // match every card that begins with `777`
+    [8900, 8950] // match every card with range between 8900 and 8950
+  ]
+})
 
-cardType('777') // 'someNewCard'
-cardType(777123456789) // 'someNewCard'
-cardType(8900) // 'someNewCard'
-cardType('89250251') // 'someNewCard'
+cardType('777') // 'my-card'
+cardType(777123456789) // 'my-card'
+cardType(8900) // 'my-card'
+cardType('89250251') // 'my-card'
 ```
 
 ## tests

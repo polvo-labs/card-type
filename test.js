@@ -3,7 +3,7 @@
  */
 
 import test from 'ava'
-import { cardType } from '.'
+import { cardType, cards } from '.'
 
 /**
  * Helpers
@@ -273,4 +273,27 @@ test('unknown', t => {
   values.forEach(value => {
     t.deepEqual(cardType(value), '')
   })
+})
+
+/**
+ * New card.
+ */
+
+test('new card', t => {
+  cards.push({
+    name: 'new-card',
+    pattern: [
+      777,
+      [100, 200]
+    ]
+  })
+
+  check([
+    777,
+    '777 500 600',
+    100,
+    150,
+    199,
+    200
+  ], 'new-card', t)
 })
