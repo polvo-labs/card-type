@@ -1,9 +1,7 @@
 import cards from './cards'
 
 export default function cardType (card) {
-  const bin = parseInt(
-    card.toString().replace(/\D/g, '').substr(0, 6)
-  )
+  const bin = getBin(card)
   const detectedTypes = []
 
   cards.forEach(card => {
@@ -17,15 +15,18 @@ export default function cardType (card) {
   return detectedTypes[0] || ''
 }
 
+function getBin (value) {
+  return parseInt(value.toString().replace(/\D/g, '').substr(0, 6))
+}
+
 function checkCard (bin, pattern) {
+  bin = bin.toString()
   return Array.isArray(pattern)
     ? checkRange(bin, pattern)
     : checkPattern(bin, pattern)
 }
 
 function checkPattern (bin, pattern) {
-  bin = bin.toString()
-
   if (pattern instanceof RegExp) {
     return pattern.test(bin)
   }
@@ -34,11 +35,7 @@ function checkPattern (bin, pattern) {
   return bin.substr(0, pattern.length) === pattern
 }
 
-function checkRange (bin, [min, max]) {
-  bin = bin.toString()
-  min = parseInt(min)
-  max = parseInt(max)
-
+function checkRange (bin, [ min, max ]) {
   const length = min.toString().length
   const value = parseInt(bin.substr(0, length))
 

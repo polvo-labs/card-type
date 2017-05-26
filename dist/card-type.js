@@ -42,7 +42,7 @@ function _interopRequireDefault(obj) {
 }
 
 function cardType(card) {
-  var bin = parseInt(card.toString().replace(/\D/g, '').substr(0, 6));
+  var bin = getBin(card);
   var detectedTypes = [];
 
   _cards2.default.forEach(function (card) {
@@ -56,13 +56,16 @@ function cardType(card) {
   return detectedTypes[0] || '';
 }
 
+function getBin(value) {
+  return parseInt(value.toString().replace(/\D/g, '').substr(0, 6));
+}
+
 function checkCard(bin, pattern) {
+  bin = bin.toString();
   return Array.isArray(pattern) ? checkRange(bin, pattern) : checkPattern(bin, pattern);
 }
 
 function checkPattern(bin, pattern) {
-  bin = bin.toString();
-
   if (pattern instanceof RegExp) {
     return pattern.test(bin);
   }
@@ -75,10 +78,6 @@ function checkRange(bin, _ref) {
   var _ref2 = _slicedToArray(_ref, 2),
       min = _ref2[0],
       max = _ref2[1];
-
-  bin = bin.toString();
-  min = parseInt(min);
-  max = parseInt(max);
 
   var length = min.toString().length;
   var value = parseInt(bin.substr(0, length));
