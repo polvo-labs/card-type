@@ -16,11 +16,10 @@ export default function cardType (card) {
 }
 
 function getBin (value) {
-  return parseInt(value.toString().replace(/\D/g, '').substr(0, 6))
+  return value.toString().replace(/\D/g, '').substr(0, 6)
 }
 
 function checkCard (bin, pattern) {
-  bin = bin.toString()
   return Array.isArray(pattern)
     ? checkRange(bin, pattern)
     : checkPattern(bin, pattern)
