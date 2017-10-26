@@ -30,7 +30,7 @@ Or you can just copy `dist/card-type.js` and include it into your project.
 
 ```js
 // ES6
-import { cardType, cards } from 'card-type'
+import { cardType, cards } from '@polvo-labs/card-type'
 
 // CommonJS
 var cardType = require('card-type').cardType

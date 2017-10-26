@@ -1,8 +1,19 @@
 {
   "name": "@polvo-labs/card-type",
   "description": "Another module for card detection",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "dist/card-type.js",
+  "keywords": [
+    "card",
+    "brand",
+    "bandeira",
+    "flag",
+    "elo",
+    "hipercard",
+    "credit",
+    "brazilian",
+    "payment"
+  ],
   "scripts": {
     "js": "simplifyify \"src/index.js\" -o \"dist/card-type.js\" -d -s CardType",
     "standard": "standard *.js",
