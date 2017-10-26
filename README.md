@@ -22,7 +22,7 @@ for brazilian cards like **Elo** and **Hipercard**.
 
 You can install it through NPM:
 
-`npm install polvo-labs/card-type --save`
+`npm install @polvo-labs/card-type --save`
 
 Or you can just copy `dist/card-type.js` and include it into your project.
 
