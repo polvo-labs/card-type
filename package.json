@@ -1,7 +1,7 @@
 {
   "name": "@polvo-labs/card-type",
   "description": "Another module for card detection",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/card-type.js",
   "keywords": [
     "card",

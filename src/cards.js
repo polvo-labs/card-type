@@ -65,6 +65,12 @@ export default [
     ]
   },
   {
+    name: 'mastercard',
+    pattern: [
+      5021
+    ]
+  },
+  {
     name: 'elo',
     pattern: [
       401178,
